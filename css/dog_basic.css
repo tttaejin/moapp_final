@@ -1,0 +1,59 @@
+.dog-basic-contents {
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  justify-content: space-between; /* 상단, 하단 영역 분리 */
+  position: relative;
+  height: 100%; /* 부모 높이에 맞춤 */
+  padding: 24px;
+  padding-top: 0px;
+}
+.dog-basic-list {
+  align-items: center; /* 세로 정렬 (중앙) */
+  display: flex;
+  margin-bottom: 8px;
+}
+/* 텍스트 필드 스타일 */
+.text-field {
+  width: 120px; /* 가로 크기 */
+  padding: 10px; /* 내부 여백 */
+  border-radius: 5px; /* 둥근 테두리 */
+  background-color: #eeebee; /* 읽기 전용 상태를 강조하는 배경색 */
+  color: #666; /* 텍스트 색상 */
+  font-size: 14px;
+  align-items: center; /* 세로 정렬 (중앙) */
+  gap: 4px; /* 텍스트 간 간격 줄이기 */
+  margin-right: 12px;
+}
+
+/* 읽기 전용 상태 */
+.text-field[readonly] {
+  width: 30%;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: not-allowed; /* 입력 불가능한 커서 */
+  background-color: #eeebee; /* 배경 색상 강조 */
+  color: #7d748a; /* 텍스트 색상을 더 흐리게 */
+}
+
+.dog-basic-title {
+  width: 16%;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.basic-details-container {
+  margin-top: auto; /* 다른 요소를 위로 밀어냄 */
+  width: 100%; /* 부모의 가로 폭에 맞춤 */
+}
+.basic-details {
+  background-color: #eeebee;
+  border-radius: 5px;
+  width: 100%; /* 부모 가로 폭에 맞춤 */
+  height: 160px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #aaa;
+  letter-spacing: 0.002;
+  line-height: 1.5; /* 가독성을 위한 줄 간격 */
+  padding: 12px;
+}
