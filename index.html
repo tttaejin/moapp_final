@@ -18,14 +18,16 @@
     <link rel="stylesheet" href="css/dog_traits.css" />
     <link rel="stylesheet" href="css/dog_history.css" />
     <link rel="stylesheet" href="css/dog_basic.css" />
+    <link rel="stylesheet" href="css/monitor.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script src="js/script.js"></script>
@@ -34,27 +36,30 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   </head>
 
   <body>
     <!-- 상단 바 -->
     <div class="top-bar">
-      <img
-        src="c:\Users\taeji\OneDrive\바탕 화면\moapp\weekFinal\weekFin\img\Logo.png"
-        style="margin-left: 12px; width: 5%"
-      />
-      <input type="text" placeholder="견주 정보 검색" />
-      <input type="text" placeholder="연락처 검색" />
-      <input type="text" placeholder="반려견 ID 검색" />
-      <button class="search">조회</button>
-      <div class="state-text">종/품종</div>
-      <div class="state-text-02">강아지/말티푸</div>
-      <hr class="state-text-border" />
-      <div class="state-text">성별</div>
-      <div class="state-text-02">M</div>
-      <hr class="state-text-border" />
-      <div class="state-text">나이</div>
-      <div class="state-text-02" style="margin-right: 60px">2세 1개월</div>
+      <img src="img/Logo.png" style="margin-left: 12px; width: 5%" />
+      <div class="top01">
+        <input type="text" placeholder="견주 정보 검색" />
+        <input type="text" placeholder="이땡땡(00100)" />
+        <input type="text" placeholder="연락처 검색" />
+        <input type="text" placeholder="반려견 ID 검색" />
+        <button class="search">조회</button>
+      </div>
+      <div class="top02">
+        <div class="state-text">종/품종</div>
+        <div class="state-text-02">강아지/말티푸</div>
+        <hr class="state-text-border" />
+        <div class="state-text">성별</div>
+        <div class="state-text-02">M</div>
+        <hr class="state-text-border" />
+        <div class="state-text">나이</div>
+        <div class="state-text-02">2세 1개월</div>
+      </div>
     </div>
     <div class="main-layout">
       <!-- 좌측 네비 바 -->
@@ -86,7 +91,15 @@
                     <!-- 그래프 영역 -->
                     <div class="graph-area">
                       <div class="radar-graph">
-                        <div id="radar-graph"></div>
+                        <div
+                          id="radar-graph"
+                          style="
+                            width: 100%;
+                            height: 100%;
+                            max-width: 600px;
+                            margin: 10px auto;
+                          "
+                        ></div>
                       </div>
                     </div>
 
@@ -100,7 +113,11 @@
                       이 반려견은 외향적이며 사람들과의 상호작용을 즐기고, 주변
                       환경에 대한 높은 호기심을 보이는 활발한 성격을 가지고
                       있습니다. 또한, 사람과의 교감을 매우 중요시하며 신뢰를
-                      형성하는 데 긍정적인 반응을 보입니다.
+                      형성하는 데 긍정적인 반응을 보입니다. 다른 동물과의
+                      상호작용에서는 신중한 태도를 보일 수 있으며, 환경 변화에
+                      적응하는 데 시간이 걸릴 수 있어 안정적인 환경을
+                      선호합니다. 전반적으로 활동성과 호기심이 뛰어나며, 다양한
+                      경험과 탐구를 즐기는 성격을 가지고 있습니다
                     </div>
                   </div>
                 </div>
@@ -112,12 +129,12 @@
                     <div class="dog-basic-list">
                       <div class="dog-basic-title">이름</div>
                       <input
-                        type="text"
+                        type="text02"
                         class="text-field"
                         value="김포포"
                         readonly
                       /><input
-                        type="text"
+                        type="text02"
                         class="text-field"
                         value="10225"
                         readonly
@@ -126,7 +143,7 @@
                     <div class="dog-basic-list">
                       <div class="dog-basic-title">종</div>
                       <input
-                        type="text"
+                        type="text02"
                         class="text-field"
                         value="강아지"
                         readonly
@@ -134,7 +151,7 @@
 
                       <div class="dog-basic-title">견종</div>
                       <input
-                        type="text"
+                        type="text02"
                         class="text-field"
                         value="말티푸"
                         readonly
@@ -143,7 +160,7 @@
                     <div class="dog-basic-list">
                       <div class="dog-basic-title">성별</div>
                       <input
-                        type="text"
+                        type="text02"
                         class="text-field"
                         value="M"
                         readonly
@@ -151,7 +168,7 @@
 
                       <div class="dog-basic-title">중성화</div>
                       <input
-                        type="text"
+                        type="text02"
                         class="text-field"
                         value="Y"
                         readonly
@@ -160,7 +177,7 @@
                     <div class="dog-basic-list">
                       <div class="dog-basic-title">생년월일</div>
                       <input
-                        type="text"
+                        type="text02"
                         class="text-field"
                         value="2022.11.11"
                         readonly
@@ -169,7 +186,7 @@
                     <div class="dog-basic-list">
                       <div class="dog-basic-title">알러지</div>
                       <input
-                        type="text"
+                        type="text02"
                         class="text-field"
                         value="닭고기 알러지"
                         readonly
@@ -177,7 +194,7 @@
 
                       <div class="dog-basic-title">질병</div>
                       <input
-                        type="text"
+                        type="text02"
                         class="text-field"
                         value="슬개골 탈구"
                         readonly
@@ -190,7 +207,14 @@
                       >
                         개인 메모
                       </div>
-                      <div class="basic-details">개인 메모를 남겨보세요.</div>
+                      <div class="basic-details">
+                        포포는 닭고기 알레르기가 있으니 사료 선택 시 주의 필요.
+                        폭죽 소리와 같은 큰 소음에 민감하니 스트레스 완화에 신경
+                        써야 함. 매일 아침 7시 산책을 좋아하며, 노즈워크와
+                        공놀이를 선호. 리드줄 당기기 습관이 있어 보완 훈련 필요.
+                        약물 복용 후 설사 증상이 있었던 적 있으니 새 약물 사용
+                        시 관찰 필요. 평소 창가 근처에서 쉬는 것을 좋아함..
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -210,12 +234,36 @@
                 <!-- 4. 모니터링 콘텐츠 화면 -->
                 <div class="monitoring-content">
                   <div id="activity" class="monitor-tab active">
-                    <h4>활동량</h4>
+                    <div
+                      style="
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        flex-direction: row;
+                      "
+                    >
+                      <h4>활동량</h4>
+                      <div
+                        class="calendar-container"
+                        style="display: flex; justify-content: flex-end"
+                      >
+                        <button id="calendar-btn" style="margin-right: 10px">
+                          <img
+                            style="size: 70%; margin-right: 4px"
+                            src="img/calendar-todo-fill.png"
+                          />
+                          날짜 선택
+                        </button>
+                      </div>
+                    </div>
                     <hr />
-                    <div class="monitor-graph">
-                      <div id="activity_graph"></div>
+                    <div class="monitor_area">
+                      <div class="monitor-graph">
+                        <div id="activity_graph"></div>
+                      </div>
                     </div>
                   </div>
+
                   <div id="sleep" class="monitor-tab">
                     <h4>수면</h4>
                     <hr />
@@ -254,72 +302,84 @@
                       <td>2024.11.28</td>
                       <td>오전 11:20</td>
                       <td>사료급여</td>
-                      <td>기록 내용</td>
+                      <td>로얄캐닌 25g 급여</td>
                     </tr>
                     <tr>
                       <td>02.</td>
                       <td>2024.11.28</td>
                       <td>오전 11:50</td>
                       <td>산책</td>
-                      <td>기록 내용</td>
+                      <td>공원에서 30분 산책</td>
                     </tr>
                     <tr>
                       <td>03.</td>
                       <td>2024.11.28</td>
                       <td>오후 13:20</td>
                       <td>배변</td>
-                      <td>기록 내용</td>
+                      <td>실외 배변 (양호)</td>
                     </tr>
                     <tr>
                       <td>04.</td>
                       <td>2024.11.28</td>
                       <td>오전 17:00</td>
                       <td>사료급여</td>
-                      <td>기록 내용</td>
+                      <td>터그 놀이 15분</td>
                     </tr>
                     <tr>
                       <td>05.</td>
                       <td>2024.11.28</td>
                       <td>오후 19:00</td>
                       <td>간식</td>
-                      <td>기록 내용</td>
+                      <td>수제 간식 (치킨 큐브 5개)</td>
                     </tr>
                     <tr>
                       <td>06.</td>
                       <td>2024.11.28</td>
                       <td>오후 21:20</td>
                       <td>산책</td>
-                      <td>기록 내용</td>
+                      <td>기본 훈련 (앉아, 기다려)</td>
                     </tr>
                     <tr>
                       <td>07.</td>
                       <td>2024.11.29</td>
                       <td>오전 08:21</td>
                       <td>사료급여</td>
-                      <td>기록 내용</td>
+                      <td>사료 20g + 연어 오일</td>
                     </tr>
                   </tbody>
                 </table>
-                <div class="dog_pic">
+                <!-- 선택된 항목을 표시하는 영역 -->
+                <div class="selected-item default" id="selected-item">
+                  항목을 선택하면 여기에 표시됩니다.
+                </div>
+
+                <div class="carousel-wrapper">
                   <div class="dog-carousel-title">반려견 등록 사진</div>
                   <div class="dog-carousel owl-carousel">
                     <div class="item">
-                      <img
-                        src="c:\Users\taeji\OneDrive\바탕 화면\moapp\weekFinal\weekFin\img\dog_1.png"
-                        alt="반려견 1"
-                      />
+                      <img src="img/dog_1.png" alt="반려견 1" />
                     </div>
                     <div class="item">
-                      <img
-                        src="c:\Users\taeji\OneDrive\바탕 화면\moapp\weekFinal\weekFin\img\dog_2.png"
-                        alt="반려견 2"
-                      />
+                      <img src="img/dog_2.png" alt="반려견 2" />
                     </div>
                     <div class="item">
-                      <img
-                        src="c:\Users\taeji\OneDrive\바탕 화면\moapp\weekFinal\weekFin\img\dog_3.png"
-                        alt="반려견 3"
-                      />
+                      <img src="img/dog_3.png" alt="반려견 3" />
+                    </div>
+
+                    <div class="item">
+                      <img src="img/dog_4.png" alt="반려견 4" />
+                    </div>
+
+                    <div class="item">
+                      <img src="img/dog_5.png" alt="반려견 5" />
+                    </div>
+
+                    <div class="item">
+                      <img src="img/dog_6.png" alt="반려견 6" />
+                    </div>
+
+                    <div class="item">
+                      <img src="img/dog_7.png" alt="반려견 7" />
                     </div>
                   </div>
                 </div>
@@ -328,11 +388,66 @@
           </div>
         </div>
 
-        <div id="test" class="tab-content">검사 콘텐츠 입니다.</div>
-        <div id="plan" class="tab-content">플랜 콘텐츠 입니다.</div>
-        <div id="counseling" class="tab-content">상담 콘텐츠 입니다.</div>
-        <div id="alerts" class="tab-content">알림 콘텐츠 입니다.</div>
-        <div id="settings" class="tab-content">설정 콘텐츠 입니다.</div>
+        <div
+          id="test"
+          class="tab-content"
+          style="
+            display: flex;
+            align-items: center;
+            margin: auto;
+            justify-content: center;
+          "
+        >
+          검사 콘텐츠를 준비중입니다.
+        </div>
+        <div
+          id="plan"
+          class="tab-content"
+          style="
+            display: flex;
+            align-items: center;
+            margin: auto;
+            justify-content: center;
+          "
+        >
+          플랜 콘텐츠를 준비중입니다.
+        </div>
+        <div
+          id="counseling"
+          class="tab-content"
+          style="
+            display: flex;
+            align-items: center;
+            margin: auto;
+            justify-content: center;
+          "
+        >
+          상담 콘텐츠를 준비중입니다.
+        </div>
+        <div
+          id="alerts"
+          class="tab-content"
+          style="
+            display: flex;
+            align-items: center;
+            margin: auto;
+            justify-content: center;
+          "
+        >
+          알림 콘텐츠를 준비중입니다.
+        </div>
+        <div
+          id="settings"
+          class="tab-content"
+          style="
+            display: flex;
+            align-items: center;
+            margin: auto;
+            justify-content: center;
+          "
+        >
+          설정 콘텐츠를 준비중입니다.
+        </div>
       </div>
     </div>
   </body>

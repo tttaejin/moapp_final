@@ -1,0 +1,228 @@
+/* 전체 레이아웃 */
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+body {
+  font-family: pretendard, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  display: flex; /* Flexbox로 레이아웃 설정 */
+  flex-direction: column; /* 상단 바를 포함한 세로 레이아웃 */
+  width: 100%;
+  height: 100%;
+}
+/* 상단 바 */
+.top-bar {
+  width: 100%;
+  position: fixed; /* 고정 */
+  top: 0; /* 화면 상단에 위치 */
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  background-color: #fff;
+  color: #fff;
+  z-index: 1000; /* 다른 요소 위에 배치 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 약간의 그림자 */
+}
+
+.top01 {
+  display: flex;
+  align-items: center;
+}
+
+/* 공통 스타일 */
+input[type="text"] {
+  margin-left: 16px;
+  padding: 10px; /* 내부 여백 */
+  border: none;
+  border-color: none;
+  border-radius: 3px; /* 둥근 모서리 */
+  background-color: #eeebee;
+  font-size: 12px; /* 글꼴 크기 */
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.01); /* 입력 필드에 약간의 그림자 */
+}
+
+/* 포커스 상태 스타일 */
+input[type="text"]:focus {
+  background-color: #e9e6e9;
+  outline: none; /* 기본 포커스 테두리 제거 */
+}
+
+/* 비활성화된 입력 필드 스타일 (예: disabled 상태) */
+input[type="text"]:disabled {
+  background-color: #f5f5f5; /* 비활성화 시 배경색 */
+  border-color: #ddd; /* 테두리 색상 */
+  color: #aaa; /* 텍스트 색상 */
+  cursor: not-allowed; /* 커서 모양 */
+}
+.search {
+  margin-left: 16px;
+  display: flex; /* Flexbox로 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  padding: 6px 28px; /* 위아래로 6px, 좌우로 16px 여백 설정 */
+  border: none;
+  border-radius: 20px;
+  background-color: #9d3aff;
+  color: #fff;
+  font-size: 12px; /* 텍스트 크기 */
+  font-weight: 500;
+  cursor: pointer; /* 클릭 가능 표시 */
+  height: auto; /* 높이를 내용에 맞춤 */
+  box-sizing: border-box; /* 패딩 포함하여 크기 계산 */
+}
+
+.top02 {
+  height: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-left: auto;
+  margin-right: 2%;
+}
+
+.state-text,
+.state-text-02 {
+  display: flex;
+  align-items: center;
+  margin: 0 8px; /* 오른쪽 간격 */
+}
+.state-text {
+  height: 100%; /* 부모 높이에 맞춤 */
+  font-size: 12px;
+  text-align: center;
+  color: #121212;
+}
+
+.state-text-02 {
+  font-weight: 700;
+  height: 100%; /* 부모 높이에 맞춤 */
+  font-size: 12px;
+  text-align: center;
+  color: #121212;
+}
+
+.state-text-border {
+  display: inline-block;
+  width: 1px;
+  height: 60%; /* 부모 높이에 맞춤 */
+  background-color: #ddd;
+  margin: 0 8px; /* 좌우 간격 설정 */
+}
+
+/* 메인 레이아웃 */
+.main-layout {
+  display: flex; /* 네비게이션 바와 콘텐츠를 가로로 배치 */
+  flex: 1; /* 상단 바를 제외한 나머지 공간 사용 */
+  width: 100%;
+}
+
+/* 네비게이션 바 */
+.nav-bar {
+  position: fixed; /* 고정 */
+  top: 50px; /* 상단 바 아래에 위치 */
+  left: 0;
+  width: 120px; /* 네비게이션 바 너비 */
+  height: calc(100vh - 50px); /* 화면 높이에서 상단 바 높이를 제외 */
+  background-color: #fff;
+  z-index: 999; /* 상단 바보다 낮은 레벨 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  border-right: 1px solid #ddd; /* 오른쪽 구분선 */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 약간의 그림자 */
+}
+
+/* 네비게이션 바 항목 - 상단 */
+.nav-top,
+.nav-bottom {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-top li,
+.nav-bottom li {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+/* 네비게이션 바 - 하단 */
+.nav-bottom {
+  position: relative;
+  bottom: auto;
+}
+
+/* 네비게이션 Hover 효과 */
+.nav-bar ul li {
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.nav-bar ul li:hover {
+  background-color: #f8ecfe;
+  color: #9d3aff;
+  transition: 0.3s;
+}
+
+/* content 영역 */
+.content {
+  display: flex;
+  align-items: center;
+  margin-top: 50px; /* 상단 바 높이만큼 여백 */
+  margin-left: 120px; /* 네비게이션 바 너비만큼 여백 */
+  padding: 4px; /* 내부 여백 */
+  background-color: #dfdcdf;
+  overflow-y: auto; /* 콘텐츠만 스크롤 가능 */
+  height: calc(100% - 50px); /* 화면 높이에서 상단 바 높이 제외 */
+  box-sizing: border-box; /* 패딩 포함한 크기 계산 */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 탭 콘텐츠 */
+.tab-content {
+  flex: 1;
+  display: none; /* 기본적으로 숨김 */
+  padding: 16px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.tab-content.active {
+  display: block; /* 활성화된 콘텐츠만 표시 */
+}
+
+input[type="text02"] {
+  padding: 10px; /* 내부 여백 */
+  border: none;
+  border-color: none;
+  border-radius: 3px; /* 둥근 모서리 */
+  background-color: #eeebee;
+  font-size: 12px; /* 글꼴 크기 */
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.01); /* 입력 필드에 약간의 그림자 */
+}
+
+/* 포커스 상태 스타일 */
+input[type="text02"]:focus {
+  background-color: #e9e6e9;
+  outline: none; /* 기본 포커스 테두리 제거 */
+}
+
+/* 비활성화된 입력 필드 스타일 (예: disabled 상태) */
+input[type="text02"]:disabled {
+  background-color: #f5f5f5; /* 비활성화 시 배경색 */
+  border-color: #ddd; /* 테두리 색상 */
+  color: #aaa; /* 텍스트 색상 */
+  cursor: not-allowed; /* 커서 모양 */
+}

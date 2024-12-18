@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+
+.monitoring-nav h4 {
+  margin: 16px;
+}
+/* 모니터링 네비게이션 바 */
+.monitoring-nav {
+  width: 17%;
+  min-width: 144px;
+  max-height: 564px;
+  display: inline-flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: center; /* 가로 방향 가운데 정렬 */
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.monitoring-nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  flex-direction: column;
+}
+
+.monitoring-nav li {
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.monitoring-nav li:hover {
+  background-color: #f8ecfe;
+  color: #9d3aff;
+  transition: 0.3s;
+}
+
+.monitoring-nav li:last-child {
+  margin-right: 0;
+}
+.monitoring-content h4 {
+  margin: 16px;
+  width: 100%;
+}
+
+/* 모니터링 콘텐츠 */
+.monitoring-content {
+  flex-direction: column; /* 세로 정렬 */
+  display: flex; /* Flexbox 적용 */
+  width: 82%;
+  min-width: 656px;
+  min-height: 480px;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.monitoring-content .monitor-tab {
+  display: none;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.monitor-graph {
+  display: flex; /* Flexbox 적용 */
+  justify-content: center; /* 하단 정렬 */
+  align-items: center; /* 가로축 가운데 정렬 */
+  flex-grow: 1; /* 남은 영역을 모두 차지하도록 */
+  padding: 10px; /* 내부 여백 추가 */
+  box-sizing: border-box; /* 패딩 포함하여 크기 계산 */
+  height: 100%; /* 부모의 높이를 모두 차지 */
+  margin-top: auto;
+}
+
+#activity_graph {
+  width: 100%; /* 그래프의 너비를 조정 */
+  height: 100%;
+  display: flex; /* Flexbox 적용 */
+  justify-content: center; /* 하단 정렬 */
+  align-items: center; /* 가로축 가운데 정렬 */
+}
+.monitoring-content .monitor-tab.active {
+  display: block;
+}
+.calendar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4px;
+  margin-right: 4px;
+}
+
+#calendar-btn {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  background-color: #eeebee;
+  color: #8f78b2;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  z-index: 1000; /* Datepicker가 가려지지 않게 */
+}
+
+#calendar-btn:hover {
+  background-color: #e6e0e6;
+}
+
+#date-range {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
